@@ -64,3 +64,10 @@ group_vars/all/groups.yml
 ```
 ansible-playbook -i inventory site.yml
 ``` 
+
+### Testing 
+
+```
+ansible -m win_shell -a 'dsquery user -name Juan*' Windows
+ansible -m win_shell -a 'dsquery user -name Eider*' windows
+```
