@@ -4,10 +4,10 @@ active_directory_groups:
     description: 'Administration'
     path: 'OU=DEPARTMENTS'
   OPS:
-    description: 'operations'
+    description: 'Operations'
     path: 'OU=DEPARTMENTS'
   DEVS:
-    description: 'developers'
+    description: 'Developers'
     path: 'OU=DEPARTMENTS'
   # SERVICES
   sudoers:

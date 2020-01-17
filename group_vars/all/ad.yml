@@ -6,7 +6,7 @@ active_directory_login_shell: /bin/bash
 ### USERS
 active_directory_domain: 'corp.enciso.website'
 active_directory_email_domain: 'enciso.website'
-active_directory_user_base_ou: 'OU=USERS,OU=CORE,DC=corp,DC=enciso,DC=website'
+active_directory_user_base_ou: 'OU=DEPARTMENTS,OU=USERS,OU=CORE,DC=corp,DC=enciso,DC=website'
 active_directory_update_password: 'on_create'
 active_directory_group_action: 'add'
 active_directory_password_never_expires_enabled: false
