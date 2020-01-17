@@ -1,6 +1,6 @@
 ---
 ansible_user: Administrator
-ansible_password: 'NVSeW?UG=G'
+ansible_password: SuperSecret2012
 ansible_port: 5986
 ansible_connection: winrm
 ansible_winrm_server_cert_validation: ignore

@@ -1,36 +1,66 @@
-## INSTALL
+## Windows AD playbook
 
-Ansible host:
+
+### Pre-configuração
+
+Para usar este playbook precisa configurar no lado do servidor windows
+```
+wget https://raw.githubusercontent.com/ansible/ansible/devel/examples/scripts/ConfigureRemotingForAnsible.ps1 -OutFile Ansible.ps1
+./Ansible.ps1
+```
+
+E no lado do ansible:
 ```
 sudo apt-get install -y libkrb5-dev
 sudo pip install pywinrm[Kerberos]
 sudo pip install --upgrade pip
-``` 
-
-Windows Server:
 ```
-wget https://raw.githubusercontent.com/ansible/ansible/devel/examples/scripts/ConfigureRemotingForAnsible.ps1 -OutFile Ansible.ps1
-./Ansible.ps1
+
+### Active Direcory OU
+
+
+```
+CORP.ENCISO.WEBSITE
+   CORE
+      GROUPS
+          DEPARTMENTS
+            * DEVS
+            * OPS
+            * ADM
+          SERVICES
+            * sudoers
+            * gitlab
+	    * nx-adm
+      USERS
+          DEPARTMENTS
+              DEVS
+                * Developer01
+                * Developer02
+              OPS
+                * Operator01
+	        * Operator02
+              ADM
+                * Administrator01
+          SERVICES
+                * ansible
+```
+
+###  Users and Groups
+
+Ficam nas variaveis:
+```
+group_vars/all/users.yml
+group_vars/all/groups.yml
+```
+
+### Configuração
+
+* Criar o arvore OU como está na figura
+
+![AD_OU](https://i.imgur.com/49zMnTQ.png)
+
+* Rodar o playbook para criar os usuarios e grupos
+
+```
+ansible-playbook -i inventory site.yml
 ``` 
-
-Create OU:
-
-CORP
-  GROUPS
-    DEPARTMENTS
-    SERVICES
-  USERS
-    DEVS
-    OPS
-    HR
-
-
-https://github.com/ianunruh/ansible-role-active-directory
-https://6uellerbpanda.gitlab.io/posts/2018/04-17-Active-Directory-usermanagement-with-Ansible/
-https://argonsys.com/microsoft-cloud/articles/configuring-ansible-manage-windows-servers-step-step/
-https://www.youtube.com/watch?v=gJ81eaGlN_I
-http://www.janua.fr/using-client-scope-with-redhat-sso-keycloak/
-https://raw.githubusercontent.com/mrbobbytables/oidckube/master/k8s-realm-example.json
-https://medium.com/@mrbobbytables/kubernetes-day-2-operations-authn-authz-with-oidc-and-a-little-help-from-keycloak-de4ea1bdbbe
-https://medium.com/@int128/kubectl-with-openid-connect-43120b451672
-https://itnext.io/protect-kubernetes-dashboard-with-openid-connect-104b9e75e39c
