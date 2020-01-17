@@ -1,0 +1,20 @@
+- name: configure active_directory users
+  win_domain_user:
+    state: "{{ item.0.ensure | default(active_directory_ensure) }}"
+    name: "{{ item.0.name }}"
+    firstname: "{{ item.0.first_name }}"
+    surname: "{{ item.0.last_name }}"
+    password: "{{ item.0.password }}"
+    password_never_expires: "{{ active_directory_password_never_expires_enabled }}"
+    user_cannot_change_password: "{{ active_directory_user_cannot_change_password_enabled }}"
+    account_locked: "{{ item.0.locked_enabled | default(active_directory_account_locked_enabled) }}"
+    path: "{{ item.0.path + ',' + active_directory_user_base_ou }}"
+    update_password: "{{ item.0.update_password | default(active_directory_update_password) }}"
+    email: "{{ item.0.email | default(item.0.first_name | lower + '.' + item.0.last_name | lower + '@' + active_directory_email_domain) }}"
+    upn: "{{ item.0.name + '@' + active_directory_domain }}"
+    groups_action: "{{ item.0.groups_action | default(active_directory_group_action) }}"
+    groups:
+      - "{{ item.1 }}"
+  with_subelements:
+    - "{{ active_directory_users | default({}) }}"
+    - groups

@@ -1,0 +1,3 @@
+---
+- include: configure_groups.yml
+- include: configure_users.yml

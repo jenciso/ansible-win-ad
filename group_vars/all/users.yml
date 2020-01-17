@@ -1,0 +1,67 @@
+active_directory_users:
+  ### ADM
+  - name: eider
+    first_name: 'Eider'
+    last_name: 'Da Costa'
+    password: 'SuperSecret2012'
+    path: 'OU=ADM'
+    description: 'ADM User'
+    email: 'eidercsnunes@gmail.com'
+    groups: "{{ active_directory_default_groups['ADM'] }}"
+
+  ### OPS
+  - name: juan
+    first_name: 'Juan'
+    last_name: 'Enciso'
+    password: 'SuperSecret2012'
+    path: 'OU=ops'
+    description: 'OPS user'
+    email: 'juan.enciso@gmail.com'
+    groups: "{{ active_directory_default_groups['OPS'] }}"
+
+  - name: maicol
+    first_name: 'Maicol'
+    last_name: 'Oliveira'
+    password: 'SuperSecret2012'
+    path: 'OU=ops'
+    description: 'OPS user'
+    email: 'maicolkaiser.oliveira@gmail.com'
+    groups: "{{ active_directory_default_groups['OPS'] }}"
+
+  - name: douglas
+    first_name: 'Douglas'
+    last_name: 'Medeiros'
+    password: 'SuperSecret2012'
+    path: 'OU=ops'
+    description: 'OPS user'
+    email: 'douglas@masternetrs.com.br'
+    groups: "{{ active_directory_default_groups['OPS'] }}"
+
+
+  ### DEVS
+  - name: jackson
+    first_name: 'Jackson'
+    last_name: 'Ferreira'
+    password: 'SuperSecret2012'
+    path: 'OU=DEVS'
+    description: 'A simple user'
+    email: 'jacksonfdam@gmail.com'
+    groups: "{{ active_directory_default_groups['DEVS'] }}"
+
+  - name: fagner
+    first_name: 'Fagner'
+    last_name: 'Pires'
+    password: 'SuperSecret2012'
+    path: 'OU=DEVS'
+    description: 'A simple user'
+    email: 'fagnerpo@gmail.com'
+    groups: "{{ active_directory_default_groups['DEVS'] }}"
+
+  - name: ederson
+    first_name: 'Ederson'
+    last_name: 'Canterle'
+    password: 'SuperSecret2012'
+    path: 'OU=DEVS'
+    description: 'A simple user'
+    email: 'ederson.canterle@gmail.com'
+    groups: "{{ active_directory_default_groups['DEVS'] }}"

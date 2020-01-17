@@ -1,0 +1,37 @@
+active_directory_groups:
+  # DEPARTMENTS
+  ADM:
+    description: 'Administration'
+    path: 'OU=DEPARTMENTS'
+  OPS:
+    description: 'operations'
+    path: 'OU=DEPARTMENTS'
+  DEVS:
+    description: 'developers'
+    path: 'OU=DEPARTMENTS'
+  # SERVICES
+  sudoers:
+    description: 'sudo users'
+    path: 'OU=SERVICES'
+  gitlab-users:
+    description: 'gitlab users'
+    path: 'OU=SERVICES'
+  kubernetes-users:
+    description: 'kubernetes users'
+    path: 'OU=SERVICES'
+  kubernetes-admins:
+    description: 'kubernetes admins'
+    path: 'OU=SERVICES'
+
+active_directory_default_groups:
+  ADM:
+    - ADM
+  OPS:
+    - OPS
+    - sudoers
+    - gitlab-users
+    - kubernetes-admins
+  DEVS:
+    - DEVS
+    - gitlab-users
+    - kubernetes-users
