@@ -71,3 +71,7 @@ ansible-playbook -i inventory site.yml
 ansible -m win_shell -a 'dsquery user -name Juan*' Windows
 ansible -m win_shell -a 'dsquery user -name Eider*' windows
 ```
+
+## Notas
+
+Para ocultar o log, usar `no_log: true` no task q precise não mostrar as infomações sensiveis
