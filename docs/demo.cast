@@ -1,4 +1,4 @@
-{"version": 2, "width": 212, "height": 41, "timestamp": 1579286373, "env": {"SHELL": "/bin/bash", "TERM": "xterm-256color"}}
+{"version": 2, "width": 100, "height": 41, "timestamp": 1579286373, "env": {"SHELL": "/bin/bash", "TERM": "xterm-256color"}}
 [0.236862, "o", "\u001b[0;32m✔\u001b[0;0m \u001b[0;37m15:39:33 [lat3480i7]\u001b[0;0m \u001b[0;36mwin-ad\u001b[0;0m\u001b]0;~/ansible/playbooks/win-ad\u0007 [\u001b[0;35mmaster\u001b[0;0m \u001b[0;36m…\u001b[0;0m1\u001b[0;0m\u001b[0;0m]\u001b[0;0m $ "]
 [4.073169, "o", "a"]
 [4.128235, "o", "s"]

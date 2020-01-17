@@ -72,6 +72,12 @@ ansible -m win_shell -a 'dsquery user -name Juan*' Windows
 ansible -m win_shell -a 'dsquery user -name Eider*' windows
 ```
 
+## Demo
+
+[![asciicast](https://asciinema.org/a/4HXnhAzbuWKkbzSdjsldQaZxf.svg)](https://asciinema.org/a/4HXnhAzbuWKkbzSdjsldQaZxf)
+
+![AD](docs/windows-AD_users.gif)
+
 ## Notas
 
 Para ocultar o log, usar `no_log: true` no task q precise não mostrar as infomações sensiveis
