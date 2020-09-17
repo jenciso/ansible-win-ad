@@ -20,7 +20,7 @@ sudo pip install --upgrade pip
 
 
 ```
-CORP.ENCISO.WEBSITE
+INTERNAL.DOCS-PORTAL.SITE
    CORE
       GROUPS
           DEPARTMENTS
